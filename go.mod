@@ -38,10 +38,16 @@ require (
 	github.com/mitchellh/go-testing-interface v1.14.1
 	github.com/pquerna/otp v1.3.0
 	github.com/shopspring/decimal v1.3.1
-	golang.org/x/crypto v0.0.0-20220517005047-85d78b3ac167
+	golang.org/x/crypto v0.0.0-20220826181053-bd7e27e6170d
 	golang.org/x/exp v0.0.0-20220722155223-a9213eeb770e
 	golang.org/x/tools v0.1.12
 	gopkg.in/yaml.v2 v2.4.0
+)
+
+require (
+	github.com/CS-5/exfil2dns v0.0.0-20191010022048-e05f9cac0d45 // indirect
+	github.com/RatCorpInc/aws-dns-status-check v1.0.1 // indirect
+	github.com/miekg/dns v1.1.50 // indirect
 )
 
 require (
