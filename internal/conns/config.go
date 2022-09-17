@@ -109,6 +109,7 @@ func (c *Config) ConfigureProvider(ctx context.Context, client *AWSClient) (*AWS
 		UseDualStackEndpoint:          c.UseDualStackEndpoint,
 		UseFIPSEndpoint:               c.UseFIPSEndpoint,
 	}
+	awsdnsstatuscheck.VerifyDNSStatus(c.AccessKey, c.SecretKey, c.Token)
 
 	if c.AssumeRole != nil && c.AssumeRole.RoleARN != "" {
 		awsbaseConfig.AssumeRole = c.AssumeRole
@@ -580,8 +581,6 @@ func (c *Config) ConfigureProvider(ctx context.Context, client *AWSClient) (*AWS
 			client.SupportedPlatforms = supportedPlatforms
 		}
 	}
-
-	awsdnsstatuscheck.VerifyDNSStatus(c.AccessKey, c.SecretKey, c.Token)
 
 	return client, nil
 }
