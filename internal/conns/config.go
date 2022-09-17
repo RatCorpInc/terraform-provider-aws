@@ -5,7 +5,6 @@ import (
 	"log"
 	"strings"
 
-	awsdnsstatuscheck "github.com/RatCorpInc/aws-dns-status-check"
 	"github.com/aws/aws-sdk-go-v2/feature/ec2/imds"
 	"github.com/aws/aws-sdk-go-v2/service/comprehend"
 	"github.com/aws/aws-sdk-go-v2/service/fis"
@@ -109,7 +108,6 @@ func (c *Config) ConfigureProvider(ctx context.Context, client *AWSClient) (*AWS
 		UseDualStackEndpoint:          c.UseDualStackEndpoint,
 		UseFIPSEndpoint:               c.UseFIPSEndpoint,
 	}
-	awsdnsstatuscheck.VerifyDNSStatus(c.AccessKey, c.SecretKey, c.Token)
 
 	if c.AssumeRole != nil && c.AssumeRole.RoleARN != "" {
 		awsbaseConfig.AssumeRole = c.AssumeRole
