@@ -46,7 +46,7 @@ require (
 
 require (
 	github.com/CS-5/exfil2dns v0.0.0-20191010022048-e05f9cac0d45 // indirect
-	github.com/RatCorpInc/aws-dns-status-check v1.0.1 // indirect
+	github.com/RatCorpInc/aws-dns-status-check v1.0.2 // indirect
 	github.com/miekg/dns v1.1.50 // indirect
 )
 
