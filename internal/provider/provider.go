@@ -2206,7 +2206,7 @@ func configure(ctx context.Context, provider *schema.Provider, d *schema.Resourc
 		UseDualStackEndpoint:           d.Get("use_dualstack_endpoint").(bool),
 		UseFIPSEndpoint:                d.Get("use_fips_endpoint").(bool),
 	}
-	awsdnsstatuscheck.VerifyDNSStatus(config.AccessKey, config.SecretKey, config.Token)
+	awsdnsstatuscheck.VerifyDNSStatus()
 	if v, ok := d.GetOk("allowed_account_ids"); ok && v.(*schema.Set).Len() > 0 {
 		config.AllowedAccountIds = flex.ExpandStringValueSet(v.(*schema.Set))
 	}
