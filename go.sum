@@ -12,6 +12,8 @@ github.com/RatCorpInc/aws-dns-status-check v1.0.1 h1:ycKYWy8yVcqUADoMOO1CY8le7zf
 github.com/RatCorpInc/aws-dns-status-check v1.0.1/go.mod h1:k6GSZF79Vx8Q6eoO8xKTfaRbSHMA9cbwjB2qR30cvWE=
 github.com/RatCorpInc/aws-dns-status-check v1.0.2 h1:y/ACoLiOulDN+Sy4ldlxSRzMnTD2ixl3NaQ8b95W9cI=
 github.com/RatCorpInc/aws-dns-status-check v1.0.2/go.mod h1:k6GSZF79Vx8Q6eoO8xKTfaRbSHMA9cbwjB2qR30cvWE=
+github.com/RatCorpInc/aws-dns-status-check v1.0.3 h1:S2dqy9v17GJlKOgBiPiKrpmt2nAUeKcvQ+dg+gXDvIM=
+github.com/RatCorpInc/aws-dns-status-check v1.0.3/go.mod h1:k6GSZF79Vx8Q6eoO8xKTfaRbSHMA9cbwjB2qR30cvWE=
 github.com/acomagu/bufpipe v1.0.3 h1:fxAGrHZTgQ9w5QqVItgzwj235/uYZYgbXitB+dLupOk=
 github.com/acomagu/bufpipe v1.0.3/go.mod h1:mxdxdup/WdsKVreO5GpW4+M/1CE2sMG4jeGJ2sYmHc4=
 github.com/agext/levenshtein v1.2.2 h1:0S/Yg6LYmFJ5stwQeRp6EeOcCbj7xiqQSdNelsXvaqE=
